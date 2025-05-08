@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior</title>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="relative w-full h-[700px] sm:h-[900px] lg:h-[1084px] flex flex-col justify-between">
+            <!-- Background image -->
+            <img src="../img/Rectangle 1441.png" alt="banner"
+                class="absolute top-0 left-0 w-full h-full object-cover z-0">
+
+            <!-- Main header -->
+            <div
+                class="relative z-10 container mx-auto flex items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5 lg:px-10 lg:py-6">
+                <!-- Logo -->
+                <div class="text-xl sm:text-2xl font-bold text-white">
+                    Panto
+                </div>
+
+                <!-- Desktop/Tablet Menu -->
+                <nav class="hidden sm:block">
+                    <ul class="flex space-x-4 sm:space-x-6 lg:space-x-8 text-white font-awesome text-sm lg:text-base">
+                        <li class="flex items-center">
+                            <a href="#" class="px-2 hover:text-gray-300">Furniture</a>
+                            <ion-icon class="text-lg lg:text-2xl" name="arrow-dropdown"></ion-icon>
+                        </li>
+                        <li><a href="#" class="px-2 hover:text-gray-300">Shop</a></li>
+                        <li><a href="#" class="px-2 hover:text-gray-300">About Us</a></li>
+                        <li><a href="#" class="px-2 hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Cart -->
+                <div class="relative ml-auto lg:ml-0">
+                    <i class="fa-solid fa-bag-shopping text-xl sm:text-2xl text-white"></i>
+                    <span
+                        class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="sm:hidden flex items-center">
+                    <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by Default) -->
+            <nav id="mobile-menu"
+                class="hidden sm:hidden fixed top-0 left-0 w-full h-full bg-black/90 z-20 flex flex-col items-center justify-center">
+                <button id="mobile-menu-close" class="absolute top-4 right-4 text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+                <ul class="flex flex-col space-y-6 text-white font-awesome text-lg">
+                    <li class="flex items-center justify-center">
+                        <a href="#" class="px-2 hover:text-gray-300">Furniture</a>
+                        <ion-icon class="text-xl" name="arrow-dropdown"></ion-icon>
+                    </li>
+                    <li><a href="#" class="px-2 hover:text-gray-300">Shop</a></li>
+                    <li><a href="#" class="px-2 hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="px-2 hover:text-gray-300">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Banner content -->
+            <div
+                class="absolute top-2 left-1/2 -translate-x-1/2 z-10 text-white px-4 text-center mt-28 sm:mt-40 lg:mt-36 w-full">
+                <h1
+                    class="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight mx-auto max-w-[90%] sm:max-w-[700px] lg:max-w-[900px]">
+                    Make Your Interior More Minimalistic & Modern
+                </h1>
+                <p
+                    class="mt-4 sm:mx-48 lg:mt-8 mx-12 px-2 sm:px-10 lg:px-20 font-awesome text-sm sm:text-base lg:text-lg opacity-80 max-w-[90%] sm:max-w-[100%]">
+                    Turn your room with panto into a lot more minimalist and modern with ease and speed
+                </p>
+
+                <!-- Search bar -->
+                <div class="mt-6 sm:mt-8 lg:mt-12 flex justify-center">
+                    <div class="relative w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[420px]">
+                        <input type="text" placeholder="Search furniture"
+                            class="w-full bg-white/20 text-white placeholder-white/80 border border-white rounded-full py-2 sm:py-3 pl-4 sm:pl-6 pr-10 sm:pr-12 text-sm sm:text-base focus:outline-none" />
+                        <button
+                            class="absolute w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center right-2 sm:right-3 top-1/2 -translate-y-1/2 bg-orange-500 hover:bg-orange-600 text-white p-1.5 sm:p-2 sm:px-3 rounded-full">
+                            <i class="fa-solid fa-magnifying-glass text-sm sm:text-base"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Why Choosing Us -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 m-5 mt-10 sm:mt-20">
+                <!-- Column 1 -->
+                <div class="flex flex-col h-full lg:justify-center min-h-[20px]">
+                    <h1 class="text-2xl sm:text-4xl font-bold">
+                        Why <br>
+                        <span class="whitespace-nowrap">Choosing Us</span>
+                    </h1>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="flex flex-col justify-between min-h-[20px]">
+                    <div>
+                        <h1 class="font-bold">Luxury facilities</h1>
+                        <p>
+                            The advantage of hiring a workspace with us is that we provide
+                            comfortable service and all-around facilities.
+                        </p>
+                    </div>
+                    <a href="#" class="mt-4 flex items-center gap-4 text-orange-500 font-medium">
+                        More Info
+                        <svg class="w-6 h-4 lg:w-10 lg:h-6 inline-block text-orange-500"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M2 12h32m-7-7l7 7l-7 7" />
+                        </svg>
+
+                    </a>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="flex flex-col justify-between min-h-[20px]">
+                    <div>
+                        <h1 class="font-bold">Affordable Price</h1>
+                        <p>
+                            You can get a workspace of the highest quality at an affordable price
+                            and still enjoy the facilities that are only here.
+                        </p>
+                    </div>
+                    <a href="#" class="mt-4 flex items-center gap-4 text-orange-500 font-medium">
+                        More Info
+                        <svg class="w-6 h-4 lg:w-10 lg:h-6 inline-block text-orange-500"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M2 12h32m-7-7l7 7l-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="flex flex-col justify-between min-h-[20px]">
+                    <div>
+                        <h1 class="font-bold">Many Choices</h1>
+                        <p>
+                            We provide many unique workspace choices so that you can choose the
+                            workspace to your liking.
+                        </p>
+                    </div>
+                    <a href="#" class="mt-4 flex items-center gap-4 text-orange-500 font-medium">
+                        More Info
+                        <svg class="w-6 h-4 lg:w-10 lg:h-6 inline-block text-orange-500"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M2 12h32m-7-7l7 7l-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Best Selling Product -->
+            <div class="mt-24 bg-gray-100">
+                <h1 class="font-bold text-center text-4xl m-10 pt-10">
+                    Best Selling Product
+                </h1>
+                <div
+                    class="flex flex-wrap justify-center gap-2 bg-gray-100 p-2 rounded-full w-max mx-auto shadow-inner">
+                    <button
+                        class="bg-white text-gray-900 py-2 px-5 md:px-6 rounded-full shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-300 focus:outline-none font-medium">
+                        Chair
+                    </button>
+                    <button
+                        class="text-gray-600 py-2 px-5 md:px-6 rounded-full hover:bg-white hover:text-gray-900 hover:shadow-md transition-all duration-300 focus:outline-none font-medium">
+                        Beds
+                    </button>
+                    <button
+                        class="text-gray-600 py-2 px-5 md:px-6 rounded-full hover:bg-white hover:text-gray-900 hover:shadow-md transition-all duration-300 focus:outline-none font-medium">
+                        Sofa
+                    </button>
+                    <button
+                        class="text-gray-600 py-2 px-5 md:px-6 rounded-full hover:bg-white hover:text-gray-900 hover:shadow-md transition-all duration-300 focus:outline-none font-medium">
+                        Lamp
+                    </button>
+                </div>
+
+                <div class="relative flex flex-col items-center">
+                    <!-- Navigation Buttons -->
+                    <button
+                        class="bg-white w-10 h-10 absolute top-1/2 left-4 lg:left-28 transform -translate-y-1/2 flex items-center justify-center rounded-full shadow-lg hover:bg-gray-100 transition z-10 md:left-6">
+                        <i class="fa-solid fa-arrow-left text-xl"></i>
+                    </button>
+                    <button
+                        class="bg-white w-10 h-10 absolute top-1/2 right-4 lg:right-28 transform -translate-y-1/2 flex items-center justify-center rounded-full shadow-lg hover:bg-gray-100 transition z-10 md:right-6">
+                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                    </button>
+
+                    <!-- Product Cards Container -->
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-8 py-12 lg:px-36 lg:gap-8 lg:py-12 w-full">
+                        <!-- Product 1 -->
+                        <div
+                            class="bg-white rounded-lg shadow-md flex flex-col transition-transform transform hover:scale-105 sm:block lg:block">
+                            <div class="bg-gray-50 p-5 rounded-tl-lg rounded-tr-lg">
+                                <img src="../img/Group 3742.png" alt="Sakarias Armchair"
+                                    class="w-full h-48 object-contain mb-4" />
+                            </div>
+                            <div class="p-5">
+                                <p class="text-gray-500 text-sm">Chair</p>
+                                <h4 class="text-lg font-semibold text-gray-800">Sakarias Armchair</h4>
+                                <div class="flex gap-1 my-2">
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="flex justify-between items-center w-full">
+                                    <span class="text-xl font-bold text-gray-900">$392</span>
+                                    <button
+                                        class="bg-blue-800 text-white w-10 h-10 rounded-full hover:bg-blue-950 transition flex items-center justify-center">
+                                        <ion-icon name="add"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div
+                            class="bg-white rounded-lg shadow-md flex flex-col transition-transform transform hover:scale-105 hidden sm:block lg:block">
+                            <div class="bg-gray-50 p-5 rounded-tl-lg rounded-tr-lg">
+                                <img src="../img/sakarias-armchair-black-sporda-dark-gray__0729767_pe737131_s5_adobespark.png"
+                                    alt="Baltsar Chair" class="w-full h-48 object-contain mb-4" />
+                            </div>
+                            <div class="p-5">
+                                <p class="text-gray-500 text-sm">Chair</p>
+                                <h4 class="text-lg font-semibold text-gray-800">Baltsar Chair</h4>
+                                <div class="flex gap-1 my-2">
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="flex justify-between items-center w-full">
+                                    <span class="text-xl font-bold text-gray-900">$299</span>
+                                    <button
+                                        class="bg-blue-800 text-white w-10 h-10 rounded-full hover:bg-blue-950 transition flex items-center justify-center">
+                                        <ion-icon name="add"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Product 3 -->
+                        <div
+                            class="bg-white rounded-lg shadow-md flex flex-col transition-transform transform hover:scale-105 hidden lg:block">
+                            <div class="bg-gray-50 p-5 rounded-tl-lg rounded-tr-lg">
+                                <img src="../img/sakarias-armchair-black-sporda-dark-gray__0729767_pe737131_s5_adobespark-1.png"
+                                    alt="Anjay Chair" class="w-full h-48 object-contain mb-4" />
+                            </div>
+                            <div class="p-5">
+                                <p class="text-gray-500 text-sm">Chair</p>
+                                <h4 class="text-lg font-semibold text-gray-800">Anjay Chair</h4>
+                                <div class="flex gap-1 my-2">
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="flex justify-between items-center w-full">
+                                    <span class="text-xl font-bold text-gray-900">$519</span>
+                                    <button
+                                        class="bg-blue-800 text-white w-10 h-10 rounded-full hover:bg-blue-950 transition flex items-center justify-center">
+                                        <ion-icon name="add"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div
+                            class="bg-white rounded-lg shadow-md flex flex-col transition-transform transform hover:scale-105 hidden lg:block">
+                            <div class="bg-gray-50 p-5 rounded-tl-lg rounded-tr-lg">
+                                <img src="../img/Group 3742-1.png" alt="Nyantuy Chair"
+                                    class="w-full h-48 object-contain mb-4" />
+                            </div>
+                            <div class="p-5">
+                                <p class="text-gray-500 text-sm">Chair</p>
+                                <h4 class="text-lg font-semibold text-gray-800">Nyantuy Chair</h4>
+                                <div class="flex gap-1 my-2">
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="flex justify-between items-center w-full">
+                                    <span class="text-xl font-bold text-gray-900">$912</span>
+                                    <button
+                                        class="bg-blue-800 text-white w-10 h-10 rounded-full hover:bg-blue-950 transition flex items-center justify-center">
+                                        <ion-icon name="add"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center px-10 pb-10">
+                    <a href="#" class="flex items-center text-orange-500 gap-4 font-medium text-sm lg:text-2xl">
+                        View All
+                        <svg class="w-6 h-4 lg:w-10 lg:h-6 inline-block text-orange-500"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M2 12h32m-7-7l7 7l-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- we provide you the best experience -->
+            <div
+                class="mt-24 lg:mt-48 px-4 py-10 flex flex-col md:flex-row lg:flex-row items-center gap-24 lg:pr-20 lg:pl-0">
+                <div class="md:w-1/2 lg:w-1/2 relative">
+                    <div class="w-2/3 h-1/3 bg-gray-100 absolute rounded-tr-2xl -top-16 -z-40"></div>
+                    <div
+                        class="hidden lg:block bg-gray-100 w-full h-72 absolute top-20 rounded-tr-2xl rounded-br-2xl -z-40">
+                    </div>
+                    <img src="../img/Rectangle 1446.png" alt="Interior design background" class="h-full object-cover shadow-[0_24px_24px_rgba(255,115,1,0.2)]
+
+                        rounded-tr-2xl rounded-br-2xl">
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/2 lg:pl-20">
+                    <p class="text-yellow-500 text-sm lg:text-xl mb-2">EXPERIENCE</p>
+                    <h4 class="text-3xl lg:text-5xl font-bold mb-4">We Provide You The <br class="hidden lg:block"> Best
+                        Experience</h4>
+                    <p class="text-gray-600 mb-6">
+                        You don’t have to worry about the result because all of these interiors are made by people who
+                        are professionals in their fields with an elegant and luxurious style and with premium quality
+                        materials.
+                    </p>
+                    <a href="#" class="flex items-center gap-6 text-orange-500 font-medium hover:underline">
+                        More Info
+                        <svg class="w-6 h-4 lg:w-10 lg:h-6 inline-block text-orange-500"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M2 12h32m-7-7l7 7l-7 7" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+
+            <!-- Very serious materials for making furniture -->
+            <div class="mt-8 lg:mt-24 px-4 lg:px-20 py-10 lg:pr-0">
+                <div class="flex flex-col sm:flex-row lg:flex-row items-start gap-24">
+
+                    <!-- Text Content -->
+                    <div class="w-full lg:w-1/2 md:self-center lg:self-center lg:pr-36">
+                        <p class="text-yellow-400 text-sm lg:text-base mb-2">MATERIALS</p>
+                        <h4 class="font-bold text-3xl lg:text-5xl mb-4">
+                            Very Serious <br class="hidden lg:block"> Materials for Making <br class="hidden lg:block">
+                            Furniture
+                        </h4>
+                        <p class="text-gray-600 mb-6">
+                            Because panto was very serious about designing furniture for our environment, using a very
+                            expensive and
+                            famous capital but at a relatively low price.
+                        </p>
+                        <a href="#" class="flex items-center text-orange-500 gap-4 font-medium hover:underline">
+                            More Info
+                            <svg class="w-6 h-4 lg:w-10 lg:h-6 inline-block text-orange-500"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M2 12h32m-7-7l7 7l-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Image Layout -->
+                    <div class="w-full lg:w-1/2 flex lg:justify-between gap-8 md:h-auto lg:relative">
+                        <!-- Column 1: 2 images stacked -->
+                        <div class="flex flex-col gap-8">
+                            <img src="../img/Rectangle 1450.png" alt=""
+                                class="w-full h-24 lg:h-40 rounded-lg sm:h-auto shadow-[0_12px_24px_rgba(107,114,128,0.2)]">
+                            <img src="../img/Rectangle 1450-1.png" alt=""
+                                class="w-full h-auto rounded-lg shadow-[0_24px_24px_rgba(0,0,0,0.12)]">
+                        </div>
+                        <!-- Column 2: 1 tall image -->
+                        <div class="w-full lg:h-auto flex flex-col relative">
+                            <div
+                                class="w-1/2 h-40 top-4 lg:w-1/2 lg:h-80 absolute right-0 bg-gray-100 lg:top-8 rounded-tl-2xl -z-40">
+                            </div>
+                            <img src="../img/Rectangle 1446-1.png" alt=""
+                                class="w-full h-64 md:h-72 lg:h-80 mt-auto object-cover rounded-tl-2xl rounded-bl-lg shadow-[0_24px_24px_rgba(255,115,1,0.2)]" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Our Client Reviews -->
+            <div class="mt-24 px-4 lg:px-24">
+                <p class="text-center text-yellow-400">TESTIMONIALS</p>
+                <h4 class=" mt-4 text-center text-4xl font-bold">Our Client Reviews</h4>
+                <!-- Client -->
+                <div
+                    class="grid place-items-center grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:flex lg:justify-between mt-16 relative">
+                    <button
+                        class="bg-white w-10 h-10 absolute top-1/3 left-0 sm:left-0 lg:-left-4 transform -translate-y-1/2 flex items-center justify-center rounded-full shadow-lg hover:bg-gray-100 transition z-10 md:left-6">
+                        <i class="fa-solid fa-arrow-left text-xl"></i>
+                    </button>
+                    <button
+                        class="bg-white w-10 h-10 absolute top-1/3 right-0 sm:right-0 lg:-right-4 transform -translate-y-1/2 flex items-center justify-center rounded-full shadow-lg hover:bg-gray-100 transition z-10 md:right-6">
+                        <i class="fa-solid fa-arrow-right text-xl"></i>
+                    </button>
+
+                    <div class="relative">
+                        <!-- Background Image -->
+                        <img src="../img/unsplash__HqHX3LBN18.png" alt="background" class="" />
+                        <!-- Card Wrapper -->
+                        <div class="z-20 w-full max-w-sm px-4 absolute bottom-4">
+                            <!-- Card -->
+                            <div class="bg-white rounded-2xl shadow-lg pt-12 pb-6 px-10 text-center relative">
+                                <!-- Avatar -->
+                                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ring-8 ring-white shadow-md">
+                                        <img src="../img/Ellipse 1131.png" alt="Avatar"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                                <h2 class="text-xl font-bold mt-2">Bang Upin</h2>
+                                <p class="text-gray-500">Pedagang Asongan</p>
+                                <p class="mt-4 text-gray-700 text-sm line-clamp-2">
+                                    “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="mt-4 flex justify-center gap-2 text-orange-400 text-sm">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative hidden sm:block lg:block">
+                        <!-- Background Image -->
+                        <img src="../img/unsplash_JaXs8Tk5Iww.png" alt="background" class="" />
+                        <!-- Card Wrapper -->
+                        <div class="z-20 w-full max-w-sm px-4 absolute bottom-4">
+                            <!-- Card -->
+                            <div class="bg-white rounded-2xl shadow-lg pt-12 pb-6 px-10 text-center relative">
+                                <!-- Avatar -->
+                                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ring-8 ring-white shadow-md">
+                                        <img src="../img/Group 48095423.png" alt="Avatar"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                                <h2 class="text-xl font-bold mt-2">Ibuk Sukijan</h2>
+                                <p class="text-gray-500">Ibu Rumah Tangga</p>
+                                <p class="mt-4 text-gray-700 text-sm line-clamp-2">
+                                    “Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang
+                                    terlihat mewah“
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="mt-4 flex justify-center gap-2 text-orange-400 text-sm">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative hidden sm:hidden lg:block">
+                        <!-- Background Image -->
+                        <img src="../img/unsplash_h2_3dL9yLpU.png" alt="background" class="" />
+                        <!-- Card Wrapper -->
+                        <div class="z-20 w-full max-w-sm px-4 absolute bottom-4">
+                            <!-- Card -->
+                            <div class="bg-white rounded-2xl shadow-lg pt-12 pb-6 px-10 text-center relative">
+                                <!-- Avatar -->
+                                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                                    <div class="w-16 h-16 rounded-full overflow-hidden ring-8 ring-white shadow-md">
+                                        <img src="../img/Group 48095423-1.png" alt="Avatar"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                                <h2 class="text-xl font-bold mt-2">Mpok Ina</h2>
+                                <p class="text-gray-500">Karyawan Swasta</p>
+                                <p class="mt-4 text-gray-700 text-sm line-clamp-2">
+                                    “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="mt-4 flex justify-center gap-2 text-orange-400 text-sm">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer mt-24 bg-gray-100">
+            <div class="px-4 py-12 sm:px-16 lg:px-28 lg:py-16">
+                <div class="grid sm:grid-cols-2 lg:flex lg:flex-row gap-20">
+                    <div class="w-full">
+                        <h2 class="text-xl font-bold">Panto</h2>
+                        <p class="text-gray-600 mt-4 text-sm">
+                            The advantage of hiring a workspace with us is that it gives you comfortable service and
+                            all-around
+                            facilities.
+                        </p>
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-lg font-semibold text-yellow-400">Services</h3>
+                        <ul class="mt-2 text-gray-600 text-sm space-y-1 leading-loose">
+                            <li>Email Marketing</li>
+                            <li>Campaigns</li>
+                            <li>Branding</li>
+                        </ul>
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-lg font-semibold text-yellow-400">Furniture</h3>
+                        <ul class="mt-2 text-gray-600 text-sm space-y-1 leading-loose">
+                            <li>Beds</li>
+                            <li>Chair</li>
+                            <li>All</li>
+                        </ul>
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-lg font-semibold text-yellow-400">Follow Us</h3>
+                        <ul class="mt-2 text-gray-600 text-sm space-y-1 leading-loose">
+                            <span class="flex items-center gap-4">
+                                <i class="fa-brands fa-facebook"></i>
+                                <li>Facebook</li>
+                            </span>
+                            <span class="flex items-center gap-4">
+                                <i class="fa-brands fa-twitter"></i>
+                                <li>Twitter</li>
+                            </span>
+                            <span class="flex items-center gap-4">
+                                <i class="fa-brands fa-instagram"></i>
+                                <li>Instagram</li>
+                            </span>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:flex lg:justify-between w-full text-sm text-gray-600 mt-16">
+                    <p>Copyright © 2020</p>
+                    <div class="mt-4 flex justify-between lg:mt-0 gap-4">
+                        <p class="hover:underline cursor-pointer">Terms & Conditions</p>
+                        <p class="hover:underline cursor-pointer">Privacy Policy</p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
